@@ -77,7 +77,8 @@ WSGI_APPLICATION = 'django_tutorial.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        #comprobamos que se va a trabajar sobre una base de datos sqlite3, se llama BASE_DIR
+        'NAME': str(BASE_DIR / "db.sqlite3"),
     }
 }
 
@@ -120,4 +121,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-DEFAULT_AUTO_FIELD='django.db.models.AutoField' 
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'

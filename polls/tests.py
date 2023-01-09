@@ -11,7 +11,7 @@ def create_question(question_text, days):
     Create a question with the given `question_text` and published the
     given number of `days` offset to now (negative for questions published
     in the past, positive for questions that have yet to be published).
-    
+
     Función auxiliar que permite crear una pregunta.
     Recibe el texto de la pregunta y los días que han pasado o faltan
     desde o para publicarla. (Un valor negativo significa que ya se publico,
