@@ -1,0 +1,48 @@
+En este fichero de mostrará la documentación necesaria para realizar el ejercicio 1:
+
+1.- CLONAR EL REPOSITORIO DE github
+
+Lo primero que hicimos fue hacer un fork del repositorio https://github.com/rubences/TutorialBasico.
+Para ello, necesitamos una cuenta de Github y seguir los siguientes pasos:
+    1.1.- Hacer un fork como se muestra en la imagen 1, contenida en esta misma carpeta.
+    1.2.- Tras ello, nos deberá quedar un repositorio como el que se muestra en la imagen 12 de esta misma carpeta.
+
+Depués, abriremos el proyecto en nuestro entorno local.
+
+2.- CREAR UN ENTORNO VIRTUAL
+
+Cuando estamos generando un proyecto con una API como es django, resulta esencial generar un entorno virtual. De esta forma, garantizaremos un
+espacio seguro de trabajo en nuestro ordenador local. Vamos a ver cómo generamos un entorno vircual y cómo se activa:
+    2.1.- Escribiremos $pip install virtualenv en nuestra terminal para descargar los paquetes necesarios.
+    2.2.- Ahora pondremos $virtualenv <nombre> indicando el nombre del entorno virtual que elijamos.
+    2.3.- Activaremos el entorno virtual de la siguinte manera: source <nombre>/bin/activate
+
+Una vez tenemos esto, tendremos que tener en la termianl de nuestro proyecto algo similar a lo qua aparece en la imagen 13 de esta misma carpeta.
+
+3.- COMPROBAR QUE SE VA A TRABAJAR CON UNA BASE DE DATOS SQLITE
+
+Para ello, nos iremos al fichero denominado settings.py ubicado en django_tutorial>settings.py.
+
+Nos fijaremmos ahora en la parte llamada DATABASE, en la que aparece un código como el que sigue en la imagen14 de esta misma carpeta
+
+Nos fijamos en particualr en el engine, en el que se expresa el tipo de base de datos con la que se va a trabajar: sqlite3. Además, tenemos que el nombre
+de la base de datos es: str(BASE_DIR / "db.sqlite3")
+
+4.- CREAR UN USUARIO ADMINISTRADOR
+Para ello es necesario volver a hacer uso de la terminal en la que expresaremos:$ python manage.py createsuperuser
+A continucación, se pedirá ingresar un usuario, email y contraseña a elección.
+Una vez hemos realilzado el paso anterior de forma correcta, podemos comprobarlo en la propia página de django, ejecutando el siguiente código en la terminal:
+python manage.py runserver
+
+Acto seguido, nos aparecerá un link que copiaremos y pegaremos en nuestro navegador. En esta url añadiremos '/admin' Para poder ir a la página de administradores
+de nuestra web de django. Ahí, introduciremos el usuario y contraseña que acabamos de generar.
+
+5.- CREAR DOS POSIBLES PREGUNTAS CON DOS POSIBLES RESPUESTAS:
+
+Para ello, partiremos del paso anterior, en la página de admin seleccionamos el botón que se indica en la imagen15.
+Rellenaremos los campos requeridos y le daremos a Save para guardar la pregunta.
+
+6.- COMPROBAMOS QUE LA APLICACIÓN FUNCIONA:
+
+Para ello, pondremos en el navegador nuestra URL base de la página web de django y añadiremos '/polls'. Seremos entonces capaces de visualizar nuestras
+preguntas con las posibles repuestas que podemos votar, como se muestra en la imagen16 e imagen17.

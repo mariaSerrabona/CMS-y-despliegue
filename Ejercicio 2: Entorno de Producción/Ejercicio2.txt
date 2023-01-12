@@ -1,0 +1,3 @@
+Realizaremos el proecto de Django en un entorno de producción.
+
+1.- GENERAR UN VPS (VIRTUAL PRIVATE SERVER):
